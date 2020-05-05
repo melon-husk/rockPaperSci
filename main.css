@@ -1,0 +1,20 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: larger;
+    background: rgb(242,192,215);
+    background: linear-gradient(90deg, rgba(242,192,215,1) 50%, rgba(172,228,244,1) 85%);
+}
+
+h1{
+    background: -webkit-linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(190,102,102,1) 50%, rgba(252,176,69,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+#but {
+    text-align: center;
+}
+p {
+    text-align: left;
+    padding-left: 34%;
+}
