@@ -5,28 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="main.js"></script>
+    
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
     <h1>Playing Rock, Paper, Sicssors with Ayse and AI</h1>
     <div id="user1" class="user">
-        <input height="120px" width="120px" type="image" src="/images/rock.svg" onMouseOver="this.src='/images/rockFocus.svg'" onclick="this.src='/images/rockOnClick.svg'" onMouseOut="this.src='/images/rock.svg'" id="comUserRock" >
-        <input height="120px" width="120px" type="image" src="/images/paper.svg" onMouseOver="this.src='/images/paperFocus.svg'" onclick="this.src='/images/paperOnClick.svg'" onMouseOut="this.src='/images/paper.svg'" id="comUserPaper">
-        <input height="120px" width="120px" type="image" src="/images/scissor.svg" onMouseOver="this.src='/images/scissorFocus.svg'" onclick="this.src='/images/scissorOnClick.svg'" onMouseOut="this.src='/images/scissor.svg'" id="comUserScissor">
+        <img height="120px" width="120px" src="/images/rock.svg" id="comUserRock" >
+        <img height="120px" width="120px" src="/images/paper.svg" id="comUserPaper">
+        <img height="120px" width="120px" src="/images/scissor.svg" id="comUserScissor">
     </div>
-    <div id="win" class="user">
-        <img src="/images/rock.svg" alt="dont look here" height="120px" width="120px">
+    <div class="user">
+        <img src="/images/rock.svg" alt="dont look here" height="120px" width="120px" id="win">
     </div>
     <div>
 
     </div>
     <div id="user2" class="user">
-        <input height="120px" width="120px" type="image" src="/images/rock.svg" onMouseOver="this.src='/images/rockFocus.svg'" onclick="this.src='/images/rockOnClick.svg'" onMouseOut="this.src='/images/rock.svg'" id="hoomanUserRock">
-        <input height="120px" width="120px" type="image" src="/images/paper.svg" onMouseOver="this.src='/images/paperFocus.svg'" onclick="this.src='/images/paperOnClick.svg'" onMouseOut="this.src='/images/paper.svg'">
-        <input height="120px" width="120px" type="image" src="/images/scissor.svg" onMouseOver="this.src='/images/scissorFocus.svg'" onclick="this.src='/images/scissorOnClick.svg'" onMouseOut="this.src='/images/scissor.svg'">
+        <input value="rock" height="120px" width="120px" type="image" src="/images/rock.svg" onMouseOver="this.src='/images/rockOnClick.svg'" onclick="this.src='/images/rockFocus.svg'" onMouseOut="this.src='/images/rock.svg'" id="hoomanUserRock">
+        <input value="paper" height="120px" width="120px" type="image" src="/images/paper.svg" onMouseOver="this.src='/images/paperOnClick.svg'" onclick="this.src='/images/paperFocus.svg'" onMouseOut="this.src='/images/paper.svg'" id="hoomanUserPaper">
+        <input value="scissors" height="120px" width="120px" type="image" src="/images/scissor.svg" onMouseOver="this.src='/images/scissorOnClick.svg'" onclick="this.src='/images/scissorFocus.svg'" onMouseOut="this.src='/images/scissor.svg'" id="hoomanUserScissor">
     </div>
-    
+    <div class="user">
+        <button id="start" onclick="game"> 
+            START
+        </button>
+        <button id="reset" onclick="reset">
+            RESET
+        </button>
+    </div>
+    <script src="main.js"></script>
 </body>
 </html>
