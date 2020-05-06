@@ -27,3 +27,8 @@ input {
     outline: 0;
 }
 
+.user {
+    text-align: center;
+    padding: 1%;
+}
+
