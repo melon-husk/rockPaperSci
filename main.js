@@ -42,13 +42,10 @@ document.querySelectorAll('#user2 input[type=image]').forEach((el) => {
     })
 });
 
-function game(userCho) {
-    let userScore = 0,
-        comScore = 0,
-        rounds = 5,
-        win, responseArray = [];
-    let comCho = computerPlay();
-    let bin = playRound(userCho, comCho);
+function updateComImg(comCho) {
+    document.getElementById('comUserRock').src = "/images/rock.svg";
+    document.getElementById('comUserPaper').src = "/images/paper.svg";
+    document.getElementById('comUserScissor').src = "/images/scissor.svg";
     if (comCho == "rock") {
         document.getElementById('comUserRock').src = "/images/rockFocus.svg";
     } else if (comCho == "paper") {
@@ -56,7 +53,26 @@ function game(userCho) {
     } else if (comCho == "scissor") {
         document.getElementById('comUserScissor').src = "/images/scissorFocus.svg";
     }
+}
 
+function game(userCho) {
+    let userScore = 0,
+        comScore = 0,
+        rounds = 5,
+        win, responseArray = [];
+    let comCho = computerPlay();
+    let bin = playRound(userCho, comCho);
+    updateComImg(comCho)
+    //updates computer hand images
+    /*if (comCho == "rock") {
+        document.getElementById('comUserRock').src = "/images/rockFocus.svg";
+    } else if (comCho == "paper") {
+        document.getElementById('comUserPaper').src = "/images/paperFocus.svg";
+    } else if (comCho == "scissor") {
+        document.getElementById('comUserScissor').src = "/images/scissorFocus.svg";
+    }*/
+    
+    //if human wins, updates middles part, else computer
     if (bin == 0) {
         userScore++;
         if (userCho == "rock") {
