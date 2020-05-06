@@ -22,12 +22,8 @@ button {
     overflow: hidden;
     outline:none;
 }
-button:hover {
-    border-radius: 30%;
 
-    background-color: -webkit-linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(190,102,102,1) 50%, rgba(252,176,69,1) 100%);
+input {
+    outline: 0;
 }
-p {
-    text-align: left;
-    padding-left: 34%;
-}
+

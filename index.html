@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,17 +11,11 @@
 </head>
 <body>
     <h1>Playing Rock, Paper, Sicssors with Ayse and AI</h1>
-    <div id = "but">
-        <input type="button" id="start" onclick="game()" value="START">
-
+    <div id="user1">
+        <input height="200px" width="200px" type="image" src="/images/rock.svg" onMouseOver="this.src='/images/rockFocus.svg'" onclick="this.src='/images/rockOnClick.svg'" onMouseOut="this.src='/images/rock.svg'">
+        <input height="200px" width="200px" type="image" src="/images/paper.svg" onMouseOver="this.src='/images/paperFocus.svg'" onclick="this.src='/images/paperOnClick.svg'" onMouseOut="this.src='/images/paper.svg'">
+        <input height="200px" width="200px" type="image" src="/images/scissor.svg" onMouseOver="this.src='/images/scissorFocus.svg'" onclick="this.src='/images/scissorOnClick.svg'" onMouseOut="this.src='/images/scissor.svg'">
     </div>
-    
-    <p id="0"></p><br>
-    <p id="1"></p><br>
-    <p id="2"></p><br>
-    <p id="3"></p><br>
-    <p id="4"></p><br>
-    <p id="5"></p><br>
 
 </body>
 </html>
