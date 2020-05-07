@@ -58,7 +58,7 @@ let userScore = 0,
         comScore = 0,
         rounds = 5,
         win,
-        currentRound;
+        currentRound=1;
 function game(userCho) {
     
     let comCho = computerPlay();
@@ -93,6 +93,8 @@ function game(userCho) {
             document.getElementById('win').src = "/images/scissor.svg";
         }
     }
+    scoreboard(userScore, comScore, currentRound);
+    currentRound++;
     /*for(let i=0; i<rounds; i++) {
         
         let comCho = computerPlay();
@@ -113,10 +115,16 @@ function reset() {
     userScore = 0;
     comCho = 0;
     currentRound = 0;
-    document.getElementById('hoomanUserRock').src = "/images/rock.svg";
-    document.getElementById('hoomanUserPaper').src = "/images/rock.svg";
-    document.getElementById('hoomanUserRock').src = "/images/rock.svg";
-
+    comScore = 0;
+    document.getElementById('comUserRock').src = "/images/rock.svg";
+    document.getElementById('comUserPaper').src = "/images/paper.svg";
+    document.getElementById('comUserScissor').src = "/images/scissor.svg";
+    scoreboard(0,0,0);
+}
+function scoreboard(userScore, comScore, currentRound) {
+    document.getElementById('comScore').innerHTML = "Computer Score"+"<br>"+comScore;
+    document.getElementById('userScore').innerHTML = "User Score " +"<br>"+ userScore;
+    document.getElementById('round').innerHTML = "Current Round "+"<br>"+currentRound;
 }
 
 

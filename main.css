@@ -34,11 +34,20 @@ input {
 
 #main {
     display: flex;
+    padding-left: 30%;
 }
 #gameBox {
-    width: 90%;
+    width: 50%;
 }
-#scoreBox {
-    text-align: left;
-    margin: -19.2px 0;
+
+.scr {
+    height: 143px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: larger;
+    background: -webkit-linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(190,49,49,1) 50%, rgba(252,176,69,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bolder;
 }
