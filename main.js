@@ -20,14 +20,14 @@ function playRound(playerSelection, computerSelection) {
     }
     //paper vs scissors
     else if (playerSelection.toUpperCase() === "PAPER") {
-        if (computerSelection.toUpperCase() === "SCISSORS") {
+        if (computerSelection.toUpperCase() === "SCISSOR") {
             return 1;
         } else {
             return 0;
         }
     }
     //rock vs scissors 
-    else if (playerSelection.toUpperCase() === "SCISSORS") {
+    else if (playerSelection.toUpperCase() === "SCISSOR") {
         if (computerSelection.toUpperCase() === "ROCK") {
             return 1;
         } else {
@@ -54,12 +54,13 @@ function updateComImg(comCho) {
         document.getElementById('comUserScissor').src = "/images/scissorFocus.svg";
     }
 }
-
-function game(userCho) {
-    let userScore = 0,
+let userScore = 0,
         comScore = 0,
         rounds = 5,
-        win, responseArray = [];
+        win,
+        currentRound;
+function game(userCho) {
+    
     let comCho = computerPlay();
     let bin = playRound(userCho, comCho);
     updateComImg(comCho)
@@ -108,7 +109,15 @@ function game(userCho) {
     }*/
 
 }
+function reset() {
+    userScore = 0;
+    comCho = 0;
+    currentRound = 0;
+    document.getElementById('hoomanUserRock').src = "/images/rock.svg";
+    document.getElementById('hoomanUserPaper').src = "/images/rock.svg";
+    document.getElementById('hoomanUserRock').src = "/images/rock.svg";
 
+}
 
 
 //    <script>

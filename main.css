@@ -32,3 +32,13 @@ input {
     padding: 1%;
 }
 
+#main {
+    display: flex;
+}
+#gameBox {
+    width: 90%;
+}
+#scoreBox {
+    text-align: left;
+    margin: -19.2px 0;
+}
