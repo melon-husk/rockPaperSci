@@ -43,15 +43,15 @@ document.querySelectorAll('#user2 input[type=image]').forEach((el) => {
 });
 
 function updateComImg(comCho) {
-    document.getElementById('comUserRock').src = "/images/rock.svg";
-    document.getElementById('comUserPaper').src = "/images/paper.svg";
-    document.getElementById('comUserScissor').src = "/images/scissor.svg";
+    document.getElementById('comUserRock').src = "images/rock.svg";
+    document.getElementById('comUserPaper').src = "images/paper.svg";
+    document.getElementById('comUserScissor').src = "images/scissor.svg";
     if (comCho == "rock") {
-        document.getElementById('comUserRock').src = "/images/rockFocus.svg";
+        document.getElementById('comUserRock').src = "images/rockFocus.svg";
     } else if (comCho == "paper") {
-        document.getElementById('comUserPaper').src = "/images/paperFocus.svg";
+        document.getElementById('comUserPaper').src = "images/paperFocus.svg";
     } else if (comCho == "scissor") {
-        document.getElementById('comUserScissor').src = "/images/scissorFocus.svg";
+        document.getElementById('comUserScissor').src = "images/scissorFocus.svg";
     }
 }
 let userScore = 0,
@@ -66,31 +66,31 @@ function game(userCho) {
     updateComImg(comCho)
     //updates computer hand images
     /*if (comCho == "rock") {
-        document.getElementById('comUserRock').src = "/images/rockFocus.svg";
+        document.getElementById('comUserRock').src = "images/rockFocus.svg";
     } else if (comCho == "paper") {
-        document.getElementById('comUserPaper').src = "/images/paperFocus.svg";
+        document.getElementById('comUserPaper').src = "images/paperFocus.svg";
     } else if (comCho == "scissor") {
-        document.getElementById('comUserScissor').src = "/images/scissorFocus.svg";
+        document.getElementById('comUserScissor').src = "images/scissorFocus.svg";
     }*/
     
     //if human wins, updates middles part, else computer
     if (bin == 0) {
         userScore++;
         if (userCho == "rock") {
-            document.getElementById('win').src = "/images/rock.svg";
+            document.getElementById('win').src = "images/rock.svg";
         } else if (userCho == "paper") {
-            document.getElementById('win').src = "/images/paper.svg";
+            document.getElementById('win').src = "images/paper.svg";
         } else {
-            document.getElementById('win').src = "/images/scissor.svg";
+            document.getElementById('win').src = "images/scissor.svg";
         }
     } else if (bin == 1) {
         comScore++;
         if (comCho == "rock") {
-            document.getElementById('win').src = "/images/rock.svg";
+            document.getElementById('win').src = "images/rock.svg";
         } else if (comCho == "paper") {
-            document.getElementById('win').src = "/images/paper.svg";
+            document.getElementById('win').src = "images/paper.svg";
         } else {
-            document.getElementById('win').src = "/images/scissor.svg";
+            document.getElementById('win').src = "images/scissor.svg";
         }
     }
     scoreboard(userScore, comScore, currentRound);
@@ -116,9 +116,9 @@ function reset() {
     comCho = 0;
     currentRound = 0;
     comScore = 0;
-    document.getElementById('comUserRock').src = "/images/rock.svg";
-    document.getElementById('comUserPaper').src = "/images/paper.svg";
-    document.getElementById('comUserScissor').src = "/images/scissor.svg";
+    document.getElementById('comUserRock').src = "images/rock.svg";
+    document.getElementById('comUserPaper').src = "images/paper.svg";
+    document.getElementById('comUserScissor').src = "images/scissor.svg";
     scoreboard(0,0,0);
 }
 function scoreboard(userScore, comScore, currentRound) {
