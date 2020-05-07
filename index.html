@@ -1,25 +1,71 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="main.js"></script>
+
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 </head>
-<body>
-    <h1>Playing Rock, Paper, Sicssors with Ayse and AI</h1>
-    <div id = "but">
-        <input type="button" id="start" onclick="game()" value="START">
 
+<body>
+    <div>
+        <h1>Playing Rock, Paper, Sicssors with Ayse and AI</h1>
     </div>
-    <p id="0"></p><br>
-    <p id="1"></p><br>
-    <p id="2"></p><br>
-    <p id="3"></p><br>
-    <p id="4"></p><br>
-    <p id="5"></p><br>
-    
+    <div id="main">
+        <div id="gameBox">
+
+            <div id="user1" class="user">
+                <img height="120px" width="120px" src="/images/rock.svg" id="comUserRock">
+                <img height="120px" width="120px" src="/images/paper.svg" id="comUserPaper">
+                <img height="120px" width="120px" src="/images/scissor.svg" id="comUserScissor">
+            </div>
+            <div class="user">
+                <img src="/images/rock.svg" alt="dont look here" height="120px" width="120px" id="win">
+            </div>
+            <div>
+
+            </div>
+            <div id="user2" class="user">
+                <input value="rock" height="120px" width="120px" type="image" src="/images/rock.svg"
+                    onMouseOver="this.src='/images/rockOnClick.svg'" onclick="this.src='/images/rockFocus.svg'"
+                    onMouseOut="this.src='/images/rock.svg'" id="hoomanUserRock">
+                <input value="paper" height="120px" width="120px" type="image" src="/images/paper.svg"
+                    onMouseOver="this.src='/images/paperOnClick.svg'" onclick="this.src='/images/paperFocus.svg'"
+                    onMouseOut="this.src='/images/paper.svg'" id="hoomanUserPaper">
+                <input value="scissor" height="120px" width="120px" type="image" src="/images/scissor.svg"
+                    onMouseOver="this.src='/images/scissorOnClick.svg'" onclick="this.src='/images/scissorFocus.svg'"
+                    onMouseOut="this.src='/images/scissor.svg'" id="hoomanUserScissor">
+            </div>
+            <div class="user">
+                <button id="reset" onclick="reset()">
+                    RESET
+                </button>
+            </div>
+
+        </div>
+        <div id="scoreBox">
+            <div class="scr">
+                <p id="comScore">
+                    
+                </p>
+            </div>
+            <div class="scr">
+                <p id="round">
+                    
+                </p>
+            </div>
+            <div class="scr"> 
+                <p id="userScore">
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
 </body>
+
 </html>
